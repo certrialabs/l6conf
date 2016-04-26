@@ -17,13 +17,20 @@ let config = require('l6conf');
 
 ### Set Environment variables
 ``` js
-// process.env.USER = "test"
-// process.env.USER_FIRSTNAME = "John"
-// process.env.USER_PASSWORD = "so_secret"
+/*
+  process.env.USER = "test"
+  process.env.USER_FIRSTNAME = "John"
+  process.env.USER_PASSWORD = "so_secret"
+*/
+
+// Sets the variables
 config.env();
-config.get('user'); // test
-config.get('user.firstname'); // John
-config.get('user.password') // so_secret
+
+/*
+  config.get('user');           // test
+  config.get('user.firstname'); // John
+  config.get('user.password')   // so_secret
+*/
 ```
 
 ### Set JSON variables
