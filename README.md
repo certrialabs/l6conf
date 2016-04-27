@@ -5,12 +5,17 @@
 This node.js library introduces a policy for transforming environment variables into a hierarchically structured json and allows you to overwrite configurations by importing multiple config files consequently.
 
 ### Overwriting Example
+The overwrite direction goes from right to left, each new setting value overwrites previous ones.
 ``` js
-// FOO=0
-config.env().json({ "foo": "1", "bar": "2" }).json({ "bar": "3" });
+/*
+  Environment variables:
+  FOO=0
+*/
+config.json({ "foo": "1", "bar": "2", "lorem": "ipsum" }).json({ "bar": "3" }).env();
 
-config.get("foo"); // 1
+config.get("foo"); // 0
 config.get("bar"); // 3
+config.get("lorem"); // ipsum
 ```
 
 ### Nesting Example
