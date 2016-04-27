@@ -2,8 +2,7 @@
 
 ## Overview
 
-This node.js library allows you overwrite configurations by importing multiple config files hierarchically.
-It also introduces nested environment variables and the ability to merge them with other configuration files.
+This node.js library introduces a policy for transforming environment variables into a hierarchically structured json and allows you to overwrite configurations by importing multiple config files consequently.
 
 ### Overwriting Example
 ``` js
@@ -20,19 +19,11 @@ DATABASE="MySpecialDB"
 DATABASE_USERNAME="root"
 DATABASE_PASSWORD="test"
 ```
-becomes:
-``` json
-{
-  "db": {
-    "value": "MySpecialDB",
-    "username": {
-      "value": "root",
-    },
-    "password": {
-      "value": "test"
-    }
-  }
-}
+transforms to:
+``` js
+config.get('database'); // MySpecialDB
+config.get('database.username'); // root
+config.get('database.password'); // test
 ```
 
 #### 

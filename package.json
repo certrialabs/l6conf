@@ -1,7 +1,7 @@
 {
   "name": "l6conf",
   "version": "0.1.0",
-  "description": "This node.js library allows you overwrite configurations by importing multiple config files hierarchically. It also introduces nested environment variables and the ability to merge them with other configuration files.",
+  "description": "This node.js library introduces a policy for transforming environment variables into a hierarchically structured json and allows you to overwrite configurations by importing multiple config files consequently.",
   "main": "./lib/l6conf.js",
   "keywords": [ "configuration", "hierarchy", "nested env", "key value store", "multiple configurations", "environment config", "json config" ],
   "author": "Krasimir Stavrev <kstavrev@elsix.bg>",
