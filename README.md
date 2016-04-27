@@ -2,8 +2,8 @@
 
 ## Overview
 
-This node.js library has the ability to overwrite configurations by importing multiple config files.
-It also introduces nested environment variables and ability to merge them hierarchically with other configuration files.
+This node.js library allows you overwrite configurations by importing multiple config files hierarchically.
+It also introduces nested environment variables and the ability to merge them with other configuration files.
 
 ### Overwriting Example
 ``` js
