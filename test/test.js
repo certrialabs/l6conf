@@ -53,6 +53,10 @@ describe('JSON Variables', () => {
     assert.equal(config.get('db.password'), json1.db.password);
   });
 
+  it('config.get(\'db.null\') -> json1.db.null == null', () => {
+    assert.equal(config.get('db.null'), null);
+  });
+
 });
 
 describe('Set', () => {

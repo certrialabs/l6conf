@@ -1,6 +1,7 @@
 {
   "db": {
     "username": "root",
-    "password": "secret"
+    "password": "secret",
+    "null": null
   }
 }
