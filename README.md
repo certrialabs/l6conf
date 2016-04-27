@@ -1,7 +1,41 @@
 # l6conf
 
 ## Overview
-This node.js library introduces nested environment variables and ability to merge them hierarchically with other configuration files.
+
+This node.js library has the ability to overwrite configurations by importing multiple config files.
+It also introduces nested environment variables and ability to merge them hierarchically with other configuration files.
+
+### Overwriting Example
+``` js
+// FOO=0
+config.env().json({ "foo": "1", "bar": "2" }).json({ "bar": "3" });
+
+config.get("foo"); // 1
+config.get("bar"); // 3
+```
+
+### Nesting Example
+``` sh
+DATABASE="MySpecialDB"
+DATABASE_USERNAME="root"
+DATABASE_PASSWORD="test"
+```
+becomes:
+``` json
+{
+  "db": {
+    "value": "MySpecialDB",
+    "username": {
+      "value": "root",
+    },
+    "password": {
+      "value": "test"
+    }
+  }
+}
+```
+
+#### 
 
 ## Documentation
 
